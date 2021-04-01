@@ -68,7 +68,7 @@
             if(mysqli_num_rows($result) ==1) {
                 $_SESSION['email'] = $email;
                 $_SESSION['success'] = "Bem vindo ao Tic-Tac-Toe";
-                header('location: home.php');
+                header('location: perfil.php');
             }else{
                 array_push($errors, "Dados da conta incorretos");
             
@@ -86,12 +86,5 @@
         unset($_SESSION['USERNAME']);
         header('location: login.php');
     }
-
-   
-
-    
-
-
-
 
 ?>
