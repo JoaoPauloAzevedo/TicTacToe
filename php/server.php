@@ -40,7 +40,7 @@
             $sql = "INSERT INTO users (username, email, password ) VALUES('$username', '$email', '$password')";
             mysqli_query($db, $sql);
             $_SESSION['username'] = $username;
-            $_SESSION['success'] = "Bem vindo ao ZÉ DOS CÃES";
+            $_SESSION['success'] = "Bem vindo ao Tic-Tac-Toe";
             header('location: home.php');
         }
 
@@ -63,21 +63,18 @@
 
         if(count($errors)==0){
             $password = md5($password);
-            $query = "SELECT * FROM users WHERE email='$email' AND password='$password";
+            $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
             $result = mysqli_query($db, $query);
-            if($result && mysqli_num_rows($result) > 0) {
+            if(mysqli_num_rows($result) ==1) {
                 $_SESSION['email'] = $email;
-                $_SESSION['success'] = "Bem vindo ao ZÉ DOS CÃES";
+                $_SESSION['success'] = "Bem vindo ao Tic-Tac-Toe";
                 header('location: home.php');
             }else{
-                array_push($errors, "Nao sabes a tua conta seu crl?");
+                array_push($errors, "Dados da conta incorretos");
             
             }
         }
-       
     
-        
-
     }
         
         
