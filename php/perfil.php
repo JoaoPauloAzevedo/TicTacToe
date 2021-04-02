@@ -20,7 +20,6 @@
                 if($dados){
                     if(mysqli_num_rows($dados) >0 ){
                         while($row = mysqli_fetch_array($dados)){
-                            //print_r($row['email']);
                             ?>
                             <div class="input-group">
                                 <label>Imagem</label>
