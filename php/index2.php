@@ -6,15 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style2.css">
-    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
 
 
  
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -60,7 +60,7 @@
 <footer>
 <?php include('footer.php'); ?>
 </footer>
-<script src="script.js"></script>
+<script src="../java/script.js"></script>
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
