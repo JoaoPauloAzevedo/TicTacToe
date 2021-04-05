@@ -2,6 +2,7 @@
 
     session_start();
 
+    $id;
     $username = "";
     $email = "";
     $errors = array();
@@ -90,30 +91,5 @@
 
     //Update incompleto
 
-    if(isset($_POST['update'])){
-
-        $currentUser = $_SESSION['email'];
-        $query = "SELECT * FROM users WHERE email='$currentUser'";
-
-        $username = mysqli_real_escape_string($db, $_POST['updateusername']);
-        $email = mysqli_real_escape_string($db, $_POST['email']);
-        $password = mysqli_real_escape_string($db, $_POST['updatepassword']);
-        $conf_password = mysqli_real_escape_string($db, $_POST['updateconf_password']);
-
-        if($password != $conf_password){
-            array_push($errors, "As passwords nao são iguais");
-        }
-
-        if(count($errors)==0){
-            $password = md5($password);
-            $sql = "INSERT INTO $currentUser (username, email, password ) VALUES('$username', '$email', '$password')";
-            mysqli_query($db, $sql);
-            $_SESSION['username'] = $username;
-            $_SESSION['success'] = "Bem vindo ao Tic-Tac-Toe";
-            header('location: home.php');
-        }
-
-        
-    }
 
 ?>
